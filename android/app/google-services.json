@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489665943298",
+    "project_id": "fresher-life-beta",
+    "storage_bucket": "fresher-life-beta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489665943298:android:e768b1952dd38476f5d41b",
+        "android_client_info": {
+          "package_name": "com.freshdev.fresherlife.fresher_life_beta"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489665943298-b0l4f93im3tsis0slil8ebsn6lpo0of6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjgb9MAGpOEnBYBKOI0-b06FopbgIGkrU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489665943298-b0l4f93im3tsis0slil8ebsn6lpo0of6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
