@@ -23,11 +23,26 @@ class _SCheckerState extends State<SChecker> {
             leading:
             IconButton(
                 tooltip: 'Back to Menu',
-                onPressed: () async { if (await controller.canGoBack()) {controller.goBack();}
-                }, icon:Icon(Icons.arrow_back_rounded,color:Colors.black,size:30))
+                onPressed: () async {
+                  // Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                  Navigator.push(context,PageRouteBuilder(
+                      transitionDuration: Duration(seconds: 1),
+                      transitionsBuilder: (context,animation,animationTime,child) {
+                        animation= CurvedAnimation(parent: animation, curve: Curves.elasticInOut);
+                        return ScaleTransition(
+                          alignment: Alignment.center,
+                          scale: animation,
+                          child: child,
+                        );
+                      },
+                      pageBuilder: (context,animation,animationTime) {
+                        return Menu();}
+                  ));
+                },
+                icon:Icon(Icons.arrow_back_rounded,color:Colors.black,size:30))
             ,
             actions: <Widget>[
-              Center(child: IconButton(onPressed: (){}, icon: Image.asset('assets/images/map.png')))
+              Center(child: IconButton(onPressed: (){}, icon: Image.asset('assets/images/icon_1.png')))
             ],
             title: Center(child: Text('Symptom Checker',style: TextStyle(color: Colors.black),)),
 

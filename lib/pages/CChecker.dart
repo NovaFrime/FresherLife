@@ -22,11 +22,24 @@ class _CCheckerState extends State<CChecker> {
             IconButton(
                 tooltip: 'Back to Menu',
                 onPressed: (){
-                  Navigator.of(context).push(MaterialPageRoute(builder: (_) => Menu() ));
+                  // Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                  Navigator.push(context,PageRouteBuilder(
+                      transitionDuration: Duration(seconds: 1),
+                      transitionsBuilder: (context,animation,animationTime,child) {
+                        animation= CurvedAnimation(parent: animation, curve: Curves.elasticInOut);
+                        return ScaleTransition(
+                          alignment: Alignment.center,
+                          scale: animation,
+                          child: child,
+                        );
+                      },
+                      pageBuilder: (context,animation,animationTime) {
+                        return Menu();}
+                  ));
                 }, icon:Icon(Icons.arrow_back_rounded,color:Colors.black,size:30))
             ,
             actions: <Widget>[
-              Center(child: IconButton(onPressed: (){}, icon: Image.asset('assets/images/map.png')))
+              Center(child: IconButton(onPressed: (){}, icon: Image.asset('assets/images/icon_1.png')))
             ],
             title: Center(child: Text('Covid Self-Checker',style: TextStyle(color: Colors.black),)),
 

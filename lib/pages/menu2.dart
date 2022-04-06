@@ -111,8 +111,20 @@ class _Menu2State extends State<Menu2> {
                           elevation: 4,
                           child: InkWell(
                             onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (_) => CMap() ));
-                              // Function is executed on tap.
+                              // Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                              Navigator.push(context,PageRouteBuilder(
+                                  transitionDuration: Duration(seconds: 1),
+                                  transitionsBuilder: (context,animation,animationTime,child) {
+                                    animation= CurvedAnimation(parent: animation, curve: Curves.elasticInOut);
+                                    return ScaleTransition(
+                                      alignment: Alignment.center,
+                                      scale: animation,
+                                      child: child,
+                                    );
+                                  },
+                                  pageBuilder: (context,animation,animationTime) {
+                                    return CMap();}
+                              ));
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -137,7 +149,20 @@ class _Menu2State extends State<Menu2> {
                           elevation: 4,
                           child: InkWell(
                             onTap: () {
-                              Navigator.of(context).push(MaterialPageRoute(builder: (_) => CChecker() ));
+                              // Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                              Navigator.push(context,PageRouteBuilder(
+                                  transitionDuration: Duration(seconds: 1),
+                                  transitionsBuilder: (context,animation,animationTime,child) {
+                                    animation= CurvedAnimation(parent: animation, curve: Curves.elasticInOut);
+                                    return ScaleTransition(
+                                      alignment: Alignment.center,
+                                      scale: animation,
+                                      child: child,
+                                    );
+                                  },
+                                  pageBuilder: (context,animation,animationTime) {
+                                    return CChecker();}
+                              ));
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -162,7 +187,20 @@ class _Menu2State extends State<Menu2> {
                           elevation: 4,
                           child: InkWell(
                             onTap: () {
-                           Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                           // Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                           Navigator.push(context,PageRouteBuilder(
+                             transitionDuration: Duration(seconds: 1),
+                             transitionsBuilder: (context,animation,animationTime,child) {
+                               animation= CurvedAnimation(parent: animation, curve: Curves.elasticInOut);
+                               return ScaleTransition(
+                                 alignment: Alignment.center,
+                                 scale: animation,
+                                 child: child,
+                               );
+                               },
+                              pageBuilder: (context,animation,animationTime) {
+                               return PillFind();}
+                           ));
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -186,7 +224,22 @@ class _Menu2State extends State<Menu2> {
                           ),
                           elevation: 4,
                           child: InkWell(
-                            onTap: () {Navigator.of(context).push(MaterialPageRoute(builder: (_) => SChecker() ));},
+                            onTap: () {
+                              // Navigator.of(context).push(MaterialPageRoute(builder: (_) => PillFind() ));
+                              Navigator.push(context,PageRouteBuilder(
+                                  transitionDuration: Duration(seconds: 1),
+                                  transitionsBuilder: (context,animation,animationTime,child) {
+                                    animation= CurvedAnimation(parent: animation, curve: Curves.elasticInOut);
+                                    return ScaleTransition(
+                                      alignment: Alignment.center,
+                                      scale: animation,
+                                      child: child,
+                                    );
+                                  },
+                                  pageBuilder: (context,animation,animationTime) {
+                                    return SChecker();}
+                              ));
+                            },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[

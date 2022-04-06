@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.freshdev.fresherlife.fresher_life_beta">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="fresher_life_beta"
+        android:label="Fresher Life"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"
